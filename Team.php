@@ -11,22 +11,22 @@ class Team
         $this->name = $parm1;
     }
 
-    public function finalScore($hts, $ats)
+    public function finalScore($ht, $at)
     {
         $this->totalGames += 1;
         
-        if ($hts > $ats) {
+        if ($ht > $at) {
             $this->totalPoints += 3;
         }
    
-        elseif ($hts < $ats) {
+        elseif ($ht < $at) {
             $this->totalPoints += 0;
 
         }
         else {
             $this->totalPoints += 1;
         }
-        $this->totalGoals += $hts;
+        $this->totalGoals += $ht;
     }
 
     public function getPoints()
