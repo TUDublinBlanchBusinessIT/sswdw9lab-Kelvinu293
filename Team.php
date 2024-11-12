@@ -33,5 +33,10 @@ class Team
     {
         return $this->totalPoints;
     }
+
+    public function getGoalAverage()
+    {
+        return $this->totalGoals/$this->totalGames;
+    }
 }
 ?>
